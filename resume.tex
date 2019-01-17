@@ -1,0 +1,194 @@
+% Copyright 2017 Ryan Lafferty
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%    http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+%% Extended Article for font-size
+\documentclass[9pt]{extarticle}
+
+%% Black and White
+%\newcommand*{\PRINT}{}
+
+%% Font
+\usepackage[T1]{fontenc}
+\usepackage{librebaskerville}
+\usepackage{fontawesome}
+\renewcommand{\familydefault}{\rmdefault}
+
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{20pt}{24pt}}
+\makeatother
+
+%% Packages
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{scrextend}
+\usepackage{tabto}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+%% Page Indentation and Line Spacing
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+\linespread{1}
+\pagenumbering{gobble}
+\addtolength{\topmargin}{-0.25in}
+\addtolength{\textheight}{0.75in}
+
+%% Custom Colours
+\definecolor{ryan-cyan}{RGB}{51,189, 209}
+\definecolor{linkblue}{RGB}{6,69,173}
+\definecolor{darkgrey}{RGB}{68,68,68}
+\definecolor{mediumgrey}{RGB}{102,102,102}
+\definecolor{linus}{RGB}{237,104,49}
+\definecolor{cooperators}{RGB}{0,174,239}
+\definecolor{inbox-marketer}{RGB}{209,49,56}
+\definecolor{wave-hq}{RGB}{17,126,144}
+\definecolor{canopy-labs}{RGB}{48,149,96}
+\definecolor{tulip-retail}{RGB}{239, 96, 120}
+\definecolor{eco-bee}{RGB}{105, 192, 128}
+
+%% Use Custom Color
+\colorlet{custom-color}{ryan-cyan}
+
+%% Enable Black and White
+\ifdefined\PRINT
+    \definecolor{em-light}{RGB}{0,0,0}
+    \definecolor{lightgrey}{RGB}{221,221,221}
+\else
+    \definecolor{em-light}{RGB}{25,130,232}
+    \definecolor{lightgrey}{RGB}{25,130,232}
+\fi
+
+%% Word Wrap
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+
+%%Begin%% Header
+{
+    \begin{tabularx}{\textwidth}{Xr}
+    {\HUGE\leavevmode\color{custom-color} Ryan Lafferty} &
+        \null\hfill\small\begin{tabular}{llX}
+            \faMapMarker\space\space\space\color{darkgrey} Toronto, Ontario, Canada & \faEnvelope\space\space\color{darkgrey} \href{mailto:rlafferty1@hotmail.com}{rlafferty1@hotmail.com} \\[3px]
+            \faGithub\space\space\color{darkgrey} \href{https://github.com/RyanLafferty}{github.com/RyanLafferty} & {\large\faMobilePhone}\space\space\space\color{darkgrey} +1 (000) 000 0000 \\[10px]
+        \end{tabular}
+    \end{tabularx}
+
+    {\color{custom-color}{\centerline{\rule{18.45cm}{0.4pt}}}}
+}
+%%End%% Header
+
+%%Begin%% Body
+{
+    %%Begin%% Programming
+    \begin{Large}
+        \color{custom-color}\textbf{\\[-5pt]Development Expertise}
+    \end{Large}
+
+    \begin{tabularx}{\textwidth}{llX}
+ 
+     \faHtml5\space\space\space{\bfseries Front-end}                               & {\small\color{darkgrey} \textbullet\space\space HTML5, CSS3, Sass, ES6/7/8, JavaScript (jQuery), React \& Redux, Webpack 3 \& 4} & \\[12pt]
+                                                                                                                  & {\small\color{darkgrey} \textbullet\space\space Bootstrap 3 \& 4, Material UI, Kendo} & \\[12pt]                                                  
+     \faCode\space\space{\bfseries Back-end}                                           & {\small\color{darkgrey} \textbullet\space\space PHP, Silex, Symfony, Node.js, Express, Python, Python3, Flask, Django, Ruby, Rails} & \\[12pt]
+     \faDatabase\space\space{\bfseries Database}                                    & {\small\color{darkgrey} \textbullet\space\space MySQL, MariaDB, PostgreSQL, Elasticsearch} & \\[12pt]
+     \faBug\space\space{\bfseries TDD}                                                     & {\small\color{darkgrey} \textbullet\space\space Jest, Enzyme, Sinon, RSpec} & \\[12pt]
+     \faCogs\space\space{\bfseries DevOps}                                             & {\small\color{darkgrey} \textbullet\space\space Make, Bash, Expect, NGINX, Git, Kubernetes, Jenkins, Docker (Compose \& Swarm)} & \\[12pt]
+     \faLinux\space\space\space{\bfseries Environment}                           & {\small\color{darkgrey} \textbullet\space\space GNU/Linux (Ubuntu Server, Fedora, CentOS), Windows, MacOS, AWS, Heroku, GCP} & \\[12pt]
+     \faPieChart\space\space{\bfseries Data Science}                               & {\small\color{darkgrey} \textbullet\space\space Pandas, Numpy, Dask, ChartJS, DraculaJS, Pentaho BA} & \\[12pt]                                         
+     \large\faMobile\space\space\space{\normalsize\bfseries Mobile}       & {\small\color{darkgrey} \textbullet\space\space Android, Android-NDK} & \\[12pt]
+        
+    \end{tabularx}
+    %%End%% Programming
+
+    %%Begin%% Experience
+    {\color{custom-color}{\centerline{\rule{18.45cm}{0.4pt}}}}
+    \begin{Large}
+        \color{custom-color}\textbf{\\[1pt]Work Experience}
+    \end{Large}
+
+    \textbf{Software Engineer at \textit{Joist} in Toronto}{\color{darkgrey}\hfill{\small{August 2018 to Present}}
+    
+     \begin{tabularx}{\textwidth}{llX} 
+       
+        \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Delivered value to contractors through the development of end to end features on the web platform} &
+         \\ { \space\space\space\space} \\
+         \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Diagnosed networking issues present in several web apps} &
+         \\ { \space\space\space\space} \\
+	\color{custom-color} \faGenderless\space\space  \color{darkgrey}{Implemented optimizations to improve application response time and overall performance} &
+         \\ { \space\space\space\space} \\
+         \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Provided feedback on a number of actionable platform improvements} &
+ 
+     \end{tabularx}
+     }
+
+
+    \textbf{Business Intelligence Developer at \textit{Inbox Marketer} in Guelph}{\color{darkgrey}\hfill{\small{June 2017 to July 2018}}     
+   
+    \begin{tabularx}{\textwidth}{llX}
+    
+       \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Developed products utilized by clients such as AT\&T, Scotiabank and The Cooperators} &
+        \\ { \space\space\space\space} \\
+        \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Created a user interface for an existing product which featured a modern, themable, multilingual } &
+         \\ { \space\space\space\space and mobile friendly interface} \\\\
+         \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Developed a number of proof of concept applications including a minimum viable product rebuild of an} &
+         \\ { \space\space\space\space existing project slated for a Q3 release} \\\\
+         \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Setup a number of clustered and development environments using Google Cloud Platform,} &
+         \\ { \space\space\space\space Kubernetes and Docker} \\\\
+         \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Created several TDD environments for various front-end and back-end projects} &
+         \\ { \space\space\space\space} \\
+         \color{custom-color} \faGenderless\space\space  \color{darkgrey}{Led technical training sessions as well as on boarding several new employees, including co-ops} &
+
+    \end{tabularx}
+    }
+    
+    \textbf{ Undergraduate Research Assistant at \textit{University of Guelph}}{\color{darkgrey}\hfill{\small{May 2016 to December 2016\\[5pt]}}}
+    \textbf{Teaching Assistant at \textit{University of Guelph}}{\color{darkgrey}\hfill{\small{September 2016 to December 2016\\[5pt]}}}
+
+   %\textbf{Undergraduate Research Assistant for \textit{University of Guelph}}{\color{darkgrey}\hfill{\small{May 2016 to December 2016\\[5pt]}}}
+   %\begin{tabularx}{\textwidth}{llX}
+      %\color{custom-color} \faGenderless\space\space  \color{darkgrey}{Provided a time on task analysis using user traffic data for Dell EMC} \\\\
+      %\color{custom-color} \faGenderless\space\space  \color{darkgrey}{Developed a student feedback back-end API for the School of Computer Science}
+   %\end{tabularx}
+
+   %\textbf{CIS*3760 \& CIS*3750, Project Lead }{\color{darkgrey}\hfill{\small{September 2016 to December 2016}}
+      %\textbf\textit{CIS*3760: } Project lead of the Fish-Shell open source project the was being developed for the duration of our software engineering course. Experience with managing a team of 8, leading various types of agile meetings  including backlog refinement meetings, sprint planning meetings, sprint review meetings and triweekly scrums.
+      %\textbf\textit{CIS*3750: }Project lead of The SeedBox project that was being created for the organization The Seed Guelph. Our team was responsible for developing a wireframe and a back-end for the final project. We utilized NGINX as well as bootstrap 4, flask, flask alchemy, and flask restless frameworks to accomplish this task.\\
+    %}
+
+   %\textbf{Teaching Assistant at \textit{University of Guelph}}{\color{darkgrey}\hfill{\small{September 2016 to December 2016\\[5pt]}}
+    %\begin{tabularx}{\textwidth}{llX} 
+       %\color{custom-color} \faGenderless\space\space  \color{darkgrey}{Instructed an introductory computer science class of around 100 students; providing live demos and} &
+       %\\ { \space\space\space\space one-on-one drop in help  }
+    %\end{tabularx}
+       % Responsible for teaching a class of around 100 first year students introductory computer programming skills, as well as providing demos, grading assignments and providing drop in help to individual students.\\
+    %}
+    %%End%% Experience
+
+    %%Begin%% Education
+    {\color{custom-color}{\centerline{\rule{18.45cm}{0.4pt}}}}
+    \begin{Large}
+        \color{custom-color}\textbf{\\[1pt]Education}
+    \end{Large}
+
+    \textit{\textbf{University of Guelph}}{\color{darkgrey}{\hfill\small{Graduated August 2017\\[5pt]}
+    Bachelor of Computing, Computer Science}}
+    %%End%% Education
+%%End%% Body
+\end{document}
